@@ -29,6 +29,9 @@ const Navbar = ({setShowlogin}) => {
             <button  className='cursor-pointer' onClick={()=>navigate('/owner')}>Dashboard</button>
             <button
             onClick={()=>setShowlogin(true)} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-light rounded-2xl'
+            >SignIn</button>
+            <button
+            onClick={()=>setShowlogin(true)} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all text-light rounded-2xl'
             >Login</button>
            
         </div>
