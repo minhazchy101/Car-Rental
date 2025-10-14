@@ -11,6 +11,7 @@ import Dashboard from './Pages/owner/Dashboard'
 import AddCar from './Pages/owner/AddCar'
 import ManageCars from './Pages/owner/ManageCars'
 import ManageBookings from './Pages/owner/ManageBookings'
+import Login from './components/Login'
 
 const App = () => {
   const [showlogin, setShowlogin] = useState(false)
@@ -18,7 +19,7 @@ const App = () => {
   return (
     <>
     {!isOwner &&  <Navbar setShowlogin={setShowlogin} />  }
-
+{showlogin && <Login setShowlogin={setShowlogin}/>}
     <Routes>
 
       <Route path='/' element={<Home/>}/>
