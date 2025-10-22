@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useAppContext } from '../context/AppContext';
+import toast from 'react-hot-toast';
 
-const Login = ({ setShowlogin }) => {
+const Login = () => {
+
+   const {setShowLogin, navigate, axios, setToken} = useAppContext()
+  
+
   const [state, setState] = useState('login');
   const [animating, setAnimating] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -8,10 +14,28 @@ const Login = ({ setShowlogin }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+console.log('state--> ', state)
+  const handleSubmit = async(e) => {
+    try {
+        e.preventDefault();
     // form submission logic here
+    const {data} = await axios.post(`/api/user/${state}`, {name, email, password})
+      // console.log(data)
+    if (data.success) {
+      toast.success(data.message)
+      navigate('/')
+      setToken(data.token)
+      localStorage.setItem('token', data.token)
+      //  console.log('localStorage--> ', localStorage)
+      setShowLogin(false)
+    }
+    else{
+      toast.error(data.message)
+    }
+    } catch (error) {
+      toast.error(error.message)
+    }
+  
   };
 
   useEffect(() => {
@@ -29,7 +53,7 @@ const Login = ({ setShowlogin }) => {
 
   return (
     <div
-      onClick={() => setShowlogin(false)}
+      onClick={() => setShowLogin(false)}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 "
     >
       <form

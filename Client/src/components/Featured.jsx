@@ -15,8 +15,8 @@ const Featured = () => {
 
 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-18'>
     {
-        dummyCarData.slice(0, 6).map((car)=> (
-            <div key={car._id}>
+        dummyCarData.slice(0, 6).map((car, index)=> (
+            <div key={index}>
                 <CarCard car={car}/>
             </div>
         ))

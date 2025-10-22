@@ -124,7 +124,7 @@ export const dummyCarData = [
         "pricePerDay": 300,
         "location": "New York",
         "description": "The BMW X5 is a mid-size luxury SUV produced by BMW. The X5 made its debut in 1999 as the first SUV ever produced by BMW.",
-        "isAvaliable": true,
+        "isAvailable": true,
         "createdAt": "2025-04-16T07:26:56.215Z",
     },
     {
@@ -141,7 +141,7 @@ export const dummyCarData = [
         "pricePerDay": 130,
         "location": "Chicago",
         "description": "The Toyota Corolla is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
-        "isAvaliable": true,
+        "isAvailable": true,
         "createdAt": "2025-04-16T08:33:57.993Z",
     },
     {
@@ -158,7 +158,7 @@ export const dummyCarData = [
         "pricePerDay": 200,
         "location": "Los Angeles",
         "description": "The Jeep Wrangler is a mid-size luxury SUV produced by Jeep. The Wrangler made its debut in 2003 as the first SUV ever produced by Jeep.",
-        "isAvaliable": true,
+        "isAvailable": true,
         "createdAt": "2025-04-16T08:34:39.592Z",
     },
     {
@@ -175,7 +175,7 @@ export const dummyCarData = [
         "pricePerDay": 209,
         "location": "Houston",
         "description": "This is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
-        "isAvaliable": true,
+        "isAvailable": true,
         "createdAt": "2025-04-17T06:15:47.318Z",
     },
     {
@@ -192,7 +192,7 @@ export const dummyCarData = [
   "pricePerDay": 300,
   "location": "New York",
   "description": "The BMW X5 is a mid-size luxury SUV produced by BMW. The X5 made its debut in 1999 as the first SUV ever produced by BMW.",
-  "isAvaliable": true,
+  "isAvailable": true,
   "createdAt": "2025-04-16T07:26:56.215Z"
 },
 {
@@ -209,7 +209,7 @@ export const dummyCarData = [
   "pricePerDay": 220,
   "location": "Los Angeles",
   "description": "The Mercedes-Benz C-Class offers a perfect balance of luxury, performance, and modern technology in a compact sedan.",
-  "isAvaliable": true,
+  "isAvailable": true,
   "createdAt": "2025-05-10T11:12:45.789Z"
 },
 {
@@ -226,7 +226,7 @@ export const dummyCarData = [
   "pricePerDay": 120,
   "location": "Chicago",
   "description": "The Toyota Corolla is a compact car known for its reliability, fuel efficiency, and comfortable driving experience.",
-  "isAvaliable": false,
+  "isAvailable": false,
   "createdAt": "2025-06-01T14:30:12.451Z"
 },
 {
@@ -243,7 +243,7 @@ export const dummyCarData = [
   "pricePerDay": 280,
   "location": "San Francisco",
   "description": "The Tesla Model 3 is a fully electric sedan offering cutting-edge technology, impressive range, and autopilot features.",
-  "isAvaliable": true,
+  "isAvailable": true,
   "createdAt": "2025-07-05T08:45:30.999Z"
 },
 {
@@ -260,7 +260,7 @@ export const dummyCarData = [
   "pricePerDay": 250,
   "location": "Miami",
   "description": "The Ford Mustang is an iconic American muscle car delivering thrilling performance and an unmistakable design.",
-  "isAvaliable": true,
+  "isAvailable": true,
   "createdAt": "2025-03-20T19:20:11.562Z"
 },
 {
@@ -277,7 +277,7 @@ export const dummyCarData = [
   "pricePerDay": 180,
   "location": "Houston",
   "description": "The Honda CR-V is a compact SUV offering excellent versatility, comfort, and advanced safety features.",
-  "isAvaliable": false,
+  "isAvailable": false,
   "createdAt": "2025-02-18T16:11:09.874Z"
 },
 {
@@ -294,7 +294,7 @@ export const dummyCarData = [
   "pricePerDay": 350,
   "location": "Seattle",
   "description": "The Audi Q7 is a luxury SUV with a spacious interior, advanced infotainment, and strong road presence.",
-  "isAvaliable": true,
+  "isAvailable": true,
   "createdAt": "2025-06-22T09:54:22.333Z"
 },
 {
@@ -311,7 +311,7 @@ export const dummyCarData = [
   "pricePerDay": 100,
   "location": "Boston",
   "description": "The Hyundai Elantra is a practical sedan combining affordability, stylish design, and efficient performance.",
-  "isAvaliable": true,
+  "isAvailable": true,
   "createdAt": "2025-01-25T12:36:17.701Z"
 }
 

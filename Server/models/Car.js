@@ -54,7 +54,7 @@ const carSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  isAvaliable: {
+  isAvailable: {
     type: Boolean,
     default: true,
   },
@@ -62,4 +62,4 @@ const carSchema = new mongoose.Schema({
 
 const Car = mongoose.model('Car' , carSchema)
 
-export default Car
+export default Car ;

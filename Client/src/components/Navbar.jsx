@@ -1,11 +1,33 @@
 import React, { useState } from 'react'
 import { assets, menuLinks } from '../assets/assets'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useAppContext } from '../context/AppContext'
+import toast from 'react-hot-toast'
 
-const Navbar = ({setShowlogin}) => {
+const Navbar = () => {
+
+    const {setShowLogin, logout, user, isOwner, axios, setIsowner} = useAppContext()
+
     const location = useLocation()
     const [open , setOpen] = useState(false)
     const navigate = useNavigate()
+
+    console.log('user -->' , user)
+    const changeRole = async ()=>{
+        try {
+            const {data} = await axios.post('/api/owner/change-role')
+            if (data.success) {
+                setIsowner(true)
+                toast.success(data.message)
+            }
+            else{
+                toast.error(data.message)
+            }
+        } catch (error) {
+            
+            toast.error(error.message)
+        }
+    }
 
   return (
     <div className={`flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 text-gray-600 border-b border-borderColor relative transition-all ${location.pathname === "/" && "bg-light" }`}>
@@ -26,11 +48,12 @@ const Navbar = ({setShowlogin}) => {
         </div>
 
         <div className='flex max-sm:flex-col items-start sm:items-center gap-6'>
-            <button  className='cursor-pointer hover:font-semibold transition-all duration-200' onClick={()=>navigate('/owner')}>Dashboard</button>
+
+            <button  className='cursor-pointer hover:font-semibold transition-all duration-200' onClick={()=>isOwner ? navigate('/owner') : changeRole()}>{isOwner ?'Dashboard': 'List Cars'}</button>
             
             <button
-            onClick={()=>setShowlogin(true)} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all duration-200 text-light rounded-2xl'
-            >Login</button>
+            onClick={()=>{user ? logout() : setShowLogin(true)}} className='cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition-all duration-200 text-light rounded-2xl'
+            >{user ? 'Logout' : 'Login'}</button>
            
         </div>
         </div>

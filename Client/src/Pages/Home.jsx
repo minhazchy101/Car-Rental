@@ -7,13 +7,13 @@ import Newsletter from '../components/Newsletter'
 
 const Home = () => {
   return (
-    <div>
+    <>
         <Hero/>
         <Featured/>
         <Banner/>
         <Testimonial/>
         <Newsletter/>
-    </div>
+    </>
   )
 }
 
